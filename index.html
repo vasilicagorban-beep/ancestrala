@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ancestrala | Pâinea autentică cu maia</title>
+    <title>Ancestrala | Pâinea autentica cu maia</title>
     <meta
       name="description"
-      content="Ancestrala — pâinea autentică cu maia din făină integrală de secară și spelta, coaptă lent și făcută cu respect față de tradiție."
+      content="Ancestrala — pâinea autentică cu maia, făcută din făină integrală de secară și spelta, coaptă lent și cu respect pentru tradiție."
     />
     <style>
       :root {
-        --bg: #f6f0e6;
+        --bg: #f4efe7;
         --paper: #fffdf9;
-        --paper-strong: #f9f1e5;
-        --dark: #2f2219;
-        --brown: #704d2d;
-        --brown-soft: #8a5a2f;
-        --gold: #d4b06d;
-        --gold-soft: #efd9a3;
-        --olive: #dfe6d0;
-        --rose: #f3e2dd;
-        --line: rgba(74, 53, 36, 0.12);
-        --shadow: 0 18px 40px rgba(62, 40, 28, 0.12);
+        --sand: #f0e4d2;
+        --cream: #f7f1e8;
+        --dark: #2d2117;
+        --brown: #5f3c22;
+        --brown-soft: #7b4f2d;
+        --olive: #7f8a5a;
+        --gold: #c89d52;
+        --gold-soft: #e8d5a2;
+        --line: rgba(57, 39, 27, 0.12);
+        --shadow: 0 22px 48px rgba(60, 42, 28, 0.12);
       }
 
       * { box-sizing: border-box; }
@@ -30,15 +30,15 @@
 
       body {
         margin: 0;
-        font-family: Georgia, "Times New Roman", serif;
-        background: linear-gradient(180deg, #f3ebdf 0%, #f9f5ee 100%);
+        background: linear-gradient(180deg, #f5efe7 0%, #f9f5ef 100%);
         color: var(--dark);
+        font-family: Georgia, "Times New Roman", serif;
         line-height: 1.7;
       }
 
       img {
         display: block;
-        max-width: 100%;
+        width: 100%;
       }
 
       a {
@@ -55,17 +55,17 @@
         position: sticky;
         top: 0;
         z-index: 30;
-        background: rgba(255, 253, 249, 0.8);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--line);
+        background: rgba(255, 253, 249, 0.82);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(72, 52, 35, 0.08);
       }
 
       .nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        min-height: 76px;
-        gap: 16px;
+        min-height: 74px;
+        gap: 18px;
       }
 
       .brand {
@@ -80,44 +80,41 @@
         border-radius: 50%;
         display: grid;
         place-items: center;
-        background: linear-gradient(135deg, var(--gold), #f5d899);
-        box-shadow: inset 0 0 0 2px rgba(255,255,255,0.7);
+        background: linear-gradient(135deg, var(--gold), #f0ce85);
+        box-shadow: inset 0 0 0 2px rgba(255,255,255,0.6);
         font-size: 22px;
       }
 
       .brand-name {
-        font-size: 1.15rem;
+        font-size: 1.12rem;
         font-weight: 700;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
       }
 
       .nav-links {
         display: flex;
-        gap: 24px;
         align-items: center;
+        gap: 24px;
         color: var(--brown);
         font-family: Arial, sans-serif;
-        font-size: 0.92rem;
-        letter-spacing: 0.02em;
+        font-size: 0.9rem;
       }
 
-      .nav-links a:hover {
-        color: var(--brown-soft);
-      }
+      .nav-links a:hover { color: var(--brown-soft); }
 
       .btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
+        gap: 10px;
         padding: 12px 22px;
         border-radius: 999px;
-        border: none;
+        border: 1px solid transparent;
         font-family: Arial, sans-serif;
+        font-size: 0.88rem;
         font-weight: 700;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
-        cursor: pointer;
       }
 
       .btn:hover {
@@ -125,98 +122,103 @@
       }
 
       .btn-primary {
-        background: linear-gradient(135deg, var(--gold), #e7c57d);
+        background: linear-gradient(135deg, var(--gold), #e9c77d);
         color: var(--dark);
-        box-shadow: 0 10px 22px rgba(180, 137, 74, 0.25);
+        box-shadow: 0 12px 22px rgba(164, 116, 52, 0.18);
+      }
+
+      .btn-whatsapp {
+        background: linear-gradient(135deg, #29b95f, #1ca455);
+        color: white;
+        box-shadow: 0 12px 22px rgba(41, 185, 95, 0.22);
       }
 
       .hero {
         position: relative;
-        min-height: 610px;
+        min-height: 620px;
         display: flex;
         align-items: center;
         background:
-          linear-gradient(90deg, rgba(30, 22, 17, 0.7) 0%, rgba(30, 22, 17, 0.52) 30%, rgba(30, 22, 17, 0.20) 100%),
-          url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+          linear-gradient(90deg, rgba(26, 18, 12, 0.70) 0%, rgba(26, 18, 12, 0.52) 35%, rgba(26, 18, 12, 0.18) 100%),
+          url('assets/1.jpg') center/cover no-repeat;
       }
 
       .hero-inner {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        align-items: end;
-        gap: 32px;
         width: min(1180px, calc(100% - 32px));
         margin: 0 auto;
-        padding: 80px 0;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 26px;
+        align-items: end;
+        padding: 76px 0;
       }
 
       .hero-copy {
-        color: white;
-        max-width: 650px;
+        color: #fffaf4;
+        max-width: 670px;
       }
 
       .eyebrow {
         display: inline-block;
-        margin-bottom: 18px;
+        margin-bottom: 14px;
         padding: 8px 14px;
         border-radius: 999px;
-        background: rgba(212, 176, 109, 0.18);
-        border: 1px solid rgba(255,255,255,0.25);
-        font-family: Arial, sans-serif;
+        background: rgba(201, 156, 83, 0.12);
+        border: 1px solid rgba(255,255,255,0.24);
+        color: #f3e6cc;
+        letter-spacing: 0.16em;
         font-size: 0.72rem;
-        letter-spacing: 0.18em;
+        font-family: Arial, sans-serif;
         text-transform: uppercase;
-        color: #f2e9d6;
       }
 
       h1 {
         margin: 0;
         font-size: clamp(2.8rem, 5vw, 5rem);
-        line-height: 0.98;
+        line-height: 0.94;
         letter-spacing: -0.04em;
-        font-weight: 700;
       }
 
       .hero-tag {
         margin-top: 18px;
-        font-size: clamp(1.05rem, 1.7vw, 1.5rem);
+        font-size: clamp(1.08rem, 2vw, 1.5rem);
+        color: #f5e7d3;
         font-style: italic;
-        color: #f0e4cf;
       }
 
       .hero-card {
-        background: rgba(255, 253, 249, 0.12);
-        border: 1px solid rgba(255,255,255,0.24);
-        color: white;
-        padding: 28px 24px;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.22);
         border-radius: 24px;
-        backdrop-filter: blur(4px);
+        padding: 26px 22px;
+        color: white;
         box-shadow: var(--shadow);
+        backdrop-filter: blur(4px);
       }
 
       .hero-card h3 {
         margin: 0 0 18px;
-        font-size: 1.1rem;
-        letter-spacing: 0.06em;
+        font-size: 1.06rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
-        color: var(--gold-soft);
+        color: #f2d59d;
       }
 
       .stat-list {
-        display: grid;
-        gap: 16px;
         margin: 0;
         padding: 0;
         list-style: none;
+        display: grid;
+        gap: 16px;
+        font-family: Arial, sans-serif;
       }
 
       .stat-list li {
         display: flex;
         justify-content: space-between;
-        gap: 12px;
-        padding-bottom: 12px;
+        gap: 14px;
         border-bottom: 1px solid rgba(255,255,255,0.18);
-        font-family: Arial, sans-serif;
+        padding-bottom: 12px;
       }
 
       .stat-list li:last-child {
@@ -225,98 +227,98 @@
       }
 
       .stat-list strong {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         color: white;
       }
 
       main {
-        padding: 56px 0 70px;
+        padding: 58px 0 72px;
       }
 
       section {
-        padding-top: 36px;
+        padding-top: 30px;
       }
 
       .section-header {
         display: flex;
         align-items: end;
         justify-content: space-between;
-        gap: 20px;
+        gap: 18px;
         margin-bottom: 28px;
       }
 
       .kicker {
+        margin-bottom: 14px;
         font-family: Arial, sans-serif;
         font-size: 0.72rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
         color: var(--brown-soft);
-        margin-bottom: 12px;
       }
 
       h2 {
         margin: 0;
         font-size: clamp(2rem, 3vw, 3rem);
-        line-height: 1.1;
+        line-height: 1.08;
         letter-spacing: -0.03em;
       }
 
       .lead {
-        max-width: 780px;
+        max-width: 800px;
         margin: 0;
-        font-size: 1.18rem;
-        color: #584934;
+        font-size: 1.14rem;
+        color: #5a483d;
       }
 
       .intro-grid {
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 28px;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 24px;
         align-items: center;
       }
 
       .intro-text {
-        font-size: 1.06rem;
+        font-size: 1.04rem;
+        color: var(--dark);
       }
 
-      .intro-box {
-        background: linear-gradient(180deg, #f8f0e5, #f1e3d2);
+      .quote-box {
+        background: linear-gradient(180deg, #f9f3ea, #f1e1c7);
         border: 1px solid var(--line);
         border-radius: 24px;
         padding: 26px 24px;
         box-shadow: var(--shadow);
       }
 
-      .quote {
+      .quote-box p {
         margin: 0;
-        font-size: 1.1rem;
-        line-height: 1.75;
+        font-size: 1.08rem;
         color: var(--dark);
       }
 
-      .quote strong {
+      .quote-box strong {
         color: var(--brown-soft);
       }
 
-      .image-stack {
+      .image-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 18px;
+        margin-top: 26px;
       }
 
-      .image-stack img {
-        width: 100%;
-        height: 280px;
+      .image-grid img {
+        height: 300px;
         object-fit: cover;
         border-radius: 22px;
         box-shadow: var(--shadow);
       }
 
-      .process {
+      .process-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 22px;
-        margin-top: 28px;
+        margin-top: 18px;
       }
 
       .step {
@@ -324,24 +326,23 @@
         border: 1px solid var(--line);
         border-radius: 22px;
         overflow: hidden;
-        box-shadow: 0 10px 26px rgba(71, 49, 33, 0.07);
+        box-shadow: 0 8px 22px rgba(69, 49, 35, 0.06);
       }
 
       .step img {
-        width: 100%;
-        height: 210px;
+        height: 220px;
         object-fit: cover;
       }
 
       .step-body {
-        padding: 20px 18px 22px;
+        padding: 20px 18px 24px;
       }
 
       .step-no {
         display: inline-block;
         margin-bottom: 10px;
         background: var(--dark);
-        color: #f8ead2;
+        color: #f8ebd2;
         font-family: Arial, sans-serif;
         font-size: 0.72rem;
         letter-spacing: 0.14em;
@@ -351,17 +352,17 @@
 
       .step h3 {
         margin: 0 0 10px;
-        font-size: 1.25rem;
+        font-size: 1.22rem;
       }
 
       .step p {
         margin: 0;
-        color: #584934;
+        color: #5a483d;
         font-size: 0.96rem;
       }
 
       .benefits {
-        margin-top: 32px;
+        margin-top: 26px;
       }
 
       .benefits-grid {
@@ -371,11 +372,11 @@
       }
 
       .benefit {
-        background: linear-gradient(180deg, #fffdf9, #f6f0e6);
+        background: linear-gradient(180deg, #fffdf9, #f4eadb);
         border: 1px solid var(--line);
         border-radius: 20px;
         padding: 22px 20px;
-        box-shadow: 0 10px 20px rgba(72, 54, 40, 0.05);
+        box-shadow: 0 12px 24px rgba(66, 48, 33, 0.05);
       }
 
       .benefit-icon {
@@ -384,21 +385,21 @@
         border-radius: 50%;
         display: grid;
         place-items: center;
-        margin-bottom: 14px;
         background: white;
-        font-size: 1.4rem;
         box-shadow: inset 0 0 0 1px var(--line);
+        margin-bottom: 14px;
+        font-size: 1.45rem;
       }
 
       .benefit h3 {
         margin: 0 0 8px;
-        font-size: 1.08rem;
+        font-size: 1.1rem;
       }
 
       .benefit p {
-        margin: 0 0 10px;
-        color: #574b42;
-        font-size: 0.95rem;
+        margin: 0 0 12px;
+        color: #564a41;
+        font-size: 0.94rem;
       }
 
       .benefit a {
@@ -409,15 +410,15 @@
       }
 
       .cta-block {
-        margin-top: 52px;
-        background: linear-gradient(135deg, #32251b 0%, #4f3628 100%);
-        border-radius: 28px;
-        padding: 38px 28px;
-        color: white;
+        margin-top: 54px;
         display: grid;
         grid-template-columns: 1.2fr 0.8fr;
-        gap: 26px;
+        gap: 28px;
         align-items: center;
+        background: linear-gradient(135deg, #312217 0%, #4a3121 100%);
+        border-radius: 28px;
+        padding: 36px 28px;
+        color: white;
         box-shadow: var(--shadow);
       }
 
@@ -427,38 +428,40 @@
 
       .cta-copy {
         display: grid;
-        gap: 12px;
+        gap: 10px;
       }
 
       .cta-copy p {
         margin: 0;
-        color: #ecd7b6;
-        font-size: 1.03rem;
+        color: #e9d4ad;
+        font-size: 1.02rem;
       }
 
-      .cta-meta {
+      .cta-right {
         display: grid;
         gap: 12px;
         justify-items: center;
-        font-family: Arial, sans-serif;
         text-align: center;
+        font-family: Arial, sans-serif;
       }
 
       .contact-pill {
-        display: inline-block;
-        background: linear-gradient(135deg, var(--gold), #eccf8d);
-        color: var(--dark);
-        padding: 12px 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 13px 22px;
         border-radius: 999px;
+        background: linear-gradient(135deg, var(--gold), #eac884);
+        color: var(--dark);
         font-weight: 700;
-        box-shadow: 0 14px 24px rgba(212, 176, 109, 0.2);
+        box-shadow: 0 12px 28px rgba(200, 157, 82, 0.2);
       }
 
       .footer {
         padding: 28px 0 56px;
         font-family: Arial, sans-serif;
         font-size: 0.8rem;
-        color: #65574d;
+        color: #5d4f44;
         text-align: center;
       }
 
@@ -469,7 +472,7 @@
           grid-template-columns: 1fr;
         }
 
-        .process,
+        .process-grid,
         .benefits-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
@@ -481,16 +484,16 @@
 
       @media (max-width: 640px) {
         .hero {
-          min-height: 540px;
+          min-height: 520px;
         }
 
         .hero-inner {
           padding: 44px 0;
         }
 
-        .process,
+        .process-grid,
         .benefits-grid,
-        .image-stack {
+        .image-grid {
           grid-template-columns: 1fr;
         }
 
@@ -499,7 +502,7 @@
         }
 
         .section-header .btn {
-          margin-top: 14px;
+          margin-top: 12px;
         }
       }
     </style>
@@ -532,7 +535,7 @@
         </div>
 
         <aside class="hero-card" aria-label="Detalii principale">
-          <h3>Traditie vie</h3>
+          <h3>Tradiție vie</h3>
           <ul class="stat-list">
             <li><span>Făină</span><strong>Secară + spelta</strong></li>
             <li><span>Fermentare</span><strong>Maia naturală</strong></li>
@@ -549,25 +552,25 @@
           <div class="section-header">
             <div>
               <div class="kicker">Primii în comunitate</div>
-              <h2>Pâine pentru oameni care se întorc la gustul adevărat</h2>
+              <h2>Pâine făcută cu răbdare și cu iubire</h2>
             </div>
-            <a class="btn btn-primary" href="#contact">Vezi detaliile</a>
+            <a class="btn btn-primary" href="https://wa.me/40736234679?text=Salut%20Ancestrala%2C%20vreau%20s%C4%83%20comand%20o%20p%C3%A2ine." target="_blank" rel="noopener">Comandă pe WhatsApp</a>
           </div>
 
           <div class="intro-grid">
             <div class="intro-text">
-              <p class="lead">Ne dorim să aducem comunității cea mai bună pâine — Ancestrala, pâinea autentică cu maia naturală, din făină integrală de secară și spelta, coaptă după o rețetă străveche, cu respect pentru proces.</p>
-              <p>Nu suntem o brutărie industrială. Facem pâine cu răbdare, în loturi mici, folosind ingredientele potrivite și maia vie, pentru un rezultat dens, aromat și autentic. Așa cum se făcea înainte: cu puține materiale, dar cu multă atenție și tradiție.</p>
+              <p class="lead">Ancestrala este pâinea autentică făcută cu maia naturală, din făină integrală de secară și spelta, coaptă lent și cu respect pentru procesul tradițional.</p>
+              <p>Nu suntem o brutărie industrială. Facem pâine în loturi mici, cu îngrijire de la maia la cuptor, pentru ca gustul să fie profund, miezul să fie dens și textura să rămână autentică.</p>
             </div>
 
-            <div class="intro-box">
-              <p class="quote"><strong>„O pâine adevărată nu se grăbește.</strong> Se respectă procesul, se hrănește maiaua și se lasă timpul să facă treaba lui.”</p>
+            <div class="quote-box">
+              <p><strong>„O pâine adevărată nu se grăbește.</strong> Se hrănește maiaua, se respectă timpul și se lasă aromele să se dezvolte.”</p>
             </div>
           </div>
 
-          <div class="image-stack" style="margin-top: 28px;">
-            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80" alt="Pâine coaptă tradițional" />
-            <img src="https://images.unsplash.com/photo-1549931314-a545dcf3bc73?auto=format&fit=crop&w=900&q=80" alt="Făină și aluat de pâine" />
+          <div class="image-grid">
+            <img src="assets/2.jpg" alt="Pâine Ancestrala" />
+            <img src="assets/3.jpg" alt="Detaliu aluat și pâine" />
           </div>
         </section>
 
@@ -575,44 +578,44 @@
           <div class="section-header">
             <div>
               <div class="kicker">Cum se face</div>
-              <h2>Un proces lent, bine făcut</h2>
+              <h2>Proces artisanal, fără grabă</h2>
             </div>
           </div>
 
-          <div class="process">
+          <div class="process-grid">
             <article class="step">
-              <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=900&q=80" alt="Maia vie" />
+              <img src="assets/4.jpg" alt="Maia vie" />
               <div class="step-body">
                 <span class="step-no">01</span>
                 <h3>Maia vie</h3>
-                <p>Totul pornește de la maiaua noastră, hrănită zilnic, activă și gata să dea aluatului gustul și structura potrivite.</p>
+                <p>Totul pornește de la maiaua noastră, hrănită zilnic, activă și pregătită să dea aluatului profunzime și aromă.</p>
               </div>
             </article>
 
             <article class="step">
-              <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=900&q=80" alt="Făină de secară și spelta" />
+              <img src="assets/5.jpg" alt="Făină de secară și spelta" />
               <div class="step-body">
                 <span class="step-no">02</span>
                 <h3>Făinuri de bază</h3>
-                <p>Secară și spelta integrală, măcinate la piatră, cântărite atent pentru balansul ideal al fiecărui lot.</p>
+                <p>Secară și spelta integrală, măcinate cu grijă, cântărite cu atenție pentru un aluat echilibrat și autentic.</p>
               </div>
             </article>
 
             <article class="step">
-              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Frământare și fermentare" />
+              <img src="assets/6.jpg" alt="Frământare și fermentare" />
               <div class="step-body">
                 <span class="step-no">03</span>
                 <h3>Frământare manuală</h3>
-                <p>Aluatul este amestecat și frământat cu grijă, apoi lăsat să se maturizeze în ritm natural, fără presări industriale.</p>
+                <p>Aluatul este frământat cu mâna și apoi lăsat să se maturizeze în ritm natural, fără presiuni industriale.</p>
               </div>
             </article>
 
             <article class="step">
-              <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484b5?auto=format&fit=crop&w=900&q=80" alt="Coacere lentă" />
+              <img src="assets/7.jpg" alt="Coacere lentă" />
               <div class="step-body">
                 <span class="step-no">04</span>
                 <h3>Coacere lentă</h3>
-                <p>Se coace încet, pentru crustă crocantă, miez umed, alveolat și gust cu adevărat de altădată.</p>
+                <p>Se coace încet, pentru crustă crocantă și miez umed, dens, cu aroma specifică pâinii de altădată.</p>
               </div>
             </article>
           </div>
@@ -626,8 +629,8 @@
             </div>
           </div>
 
-          <p class="lead">Pâinea de secară cu maia și pâinea țărănească fac parte din inima culturii culinare germane de secole. Același spirit se regăsește și în tradiția românească a pâinii făcute la cuptor, cu maia, din faină integrala.</p>
-          <p style="margin-top: 14px; color: #584934; font-size: 1.04rem;">Ne-am inspirat din această tradiție: fermentare lentă, ingrediente puține și corecte, respect pentru proces și pentru bobul integral. Rezultatul este o pâine savuroasă, echilibrată și cu profunzime de gust.</p>
+          <p class="lead">Pâinea de secară cu maia și pâinea țărănească fac parte din inima culturii culinare de secole. Spiritul ei se regăsește într-o pâine făcută cu răbdare, fără prescurtări și fără industrializare.</p>
+          <p style="margin-top: 14px; color: #5a483d; font-size: 1.04rem;">Aici se întâlnesc tradiția nemțească a pâinii de secară și moștenirea pâinii de casă românești: cereal integru, maia vie și un gust profund, autentic, care nu se uită ușor.</p>
         </section>
 
         <section id="beneficii" class="benefits">
@@ -678,9 +681,9 @@
             <p>Loturi limitate, coapte manual cu respect pentru tradiție.</p>
           </div>
 
-          <div class="cta-meta">
-            <div class="contact-pill">📞 0736 234 679</div>
-            <div style="font-size: 0.9rem; color: #ebd9b4;">Comenzi cu minimum 2 zile înainte</div>
+          <div class="cta-right">
+            <a class="contact-pill" href="https://wa.me/40736234679?text=Salut%20Ancestrala%2C%20vreau%20s%C4%83%20comand%20o%20p%C3%A2ine." target="_blank" rel="noopener">📲 Comandă pe WhatsApp</a>
+            <div style="font-size: 0.87rem; color: #ebd9b4;">Comenzi cu minimum 2 zile înainte</div>
           </div>
         </section>
       </div>
