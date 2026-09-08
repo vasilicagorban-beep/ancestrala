@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ancestrala | Pâinea autentică cu maia</title>
+    <meta
+      name="description"
+      content="Ancestrala — pâinea autentică cu maia din făină integrală de secară și spelta, coaptă lent și făcută cu respect față de tradiție."
+    />
+    <style>
+      :root {
+        --bg: #f6f0e6;
+        --paper: #fffdf9;
+        --paper-strong: #f9f1e5;
+        --dark: #2f2219;
+        --brown: #704d2d;
+        --brown-soft: #8a5a2f;
+        --gold: #d4b06d;
+        --gold-soft: #efd9a3;
+        --olive: #dfe6d0;
+        --rose: #f3e2dd;
+        --line: rgba(74, 53, 36, 0.12);
+        --shadow: 0 18px 40px rgba(62, 40, 28, 0.12);
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        background: linear-gradient(180deg, #f3ebdf 0%, #f9f5ee 100%);
+        color: var(--dark);
+        line-height: 1.7;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 30;
+        background: rgba(255, 253, 249, 0.8);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 76px;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--gold), #f5d899);
+        box-shadow: inset 0 0 0 2px rgba(255,255,255,0.7);
+        font-size: 22px;
+      }
+
+      .brand-name {
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        color: var(--brown);
+        font-family: Arial, sans-serif;
+        font-size: 0.92rem;
+        letter-spacing: 0.02em;
+      }
+
+      .nav-links a:hover {
+        color: var(--brown-soft);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 22px;
+        border-radius: 999px;
+        border: none;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--gold), #e7c57d);
+        color: var(--dark);
+        box-shadow: 0 10px 22px rgba(180, 137, 74, 0.25);
+      }
+
+      .hero {
+        position: relative;
+        min-height: 610px;
+        display: flex;
+        align-items: center;
+        background:
+          linear-gradient(90deg, rgba(30, 22, 17, 0.7) 0%, rgba(30, 22, 17, 0.52) 30%, rgba(30, 22, 17, 0.20) 100%),
+          url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        align-items: end;
+        gap: 32px;
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 80px 0;
+      }
+
+      .hero-copy {
+        color: white;
+        max-width: 650px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 18px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(212, 176, 109, 0.18);
+        border: 1px solid rgba(255,255,255,0.25);
+        font-family: Arial, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #f2e9d6;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.8rem, 5vw, 5rem);
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+        font-weight: 700;
+      }
+
+      .hero-tag {
+        margin-top: 18px;
+        font-size: clamp(1.05rem, 1.7vw, 1.5rem);
+        font-style: italic;
+        color: #f0e4cf;
+      }
+
+      .hero-card {
+        background: rgba(255, 253, 249, 0.12);
+        border: 1px solid rgba(255,255,255,0.24);
+        color: white;
+        padding: 28px 24px;
+        border-radius: 24px;
+        backdrop-filter: blur(4px);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-card h3 {
+        margin: 0 0 18px;
+        font-size: 1.1rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--gold-soft);
+      }
+
+      .stat-list {
+        display: grid;
+        gap: 16px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .stat-list li {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.18);
+        font-family: Arial, sans-serif;
+      }
+
+      .stat-list li:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .stat-list strong {
+        font-size: 1.25rem;
+        color: white;
+      }
+
+      main {
+        padding: 56px 0 70px;
+      }
+
+      section {
+        padding-top: 36px;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 20px;
+        margin-bottom: 28px;
+      }
+
+      .kicker {
+        font-family: Arial, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--brown-soft);
+        margin-bottom: 12px;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: clamp(2rem, 3vw, 3rem);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+      }
+
+      .lead {
+        max-width: 780px;
+        margin: 0;
+        font-size: 1.18rem;
+        color: #584934;
+      }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 28px;
+        align-items: center;
+      }
+
+      .intro-text {
+        font-size: 1.06rem;
+      }
+
+      .intro-box {
+        background: linear-gradient(180deg, #f8f0e5, #f1e3d2);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        padding: 26px 24px;
+        box-shadow: var(--shadow);
+      }
+
+      .quote {
+        margin: 0;
+        font-size: 1.1rem;
+        line-height: 1.75;
+        color: var(--dark);
+      }
+
+      .quote strong {
+        color: var(--brown-soft);
+      }
+
+      .image-stack {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .image-stack img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .process {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+        margin-top: 28px;
+      }
+
+      .step {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 10px 26px rgba(71, 49, 33, 0.07);
+      }
+
+      .step img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+      }
+
+      .step-body {
+        padding: 20px 18px 22px;
+      }
+
+      .step-no {
+        display: inline-block;
+        margin-bottom: 10px;
+        background: var(--dark);
+        color: #f8ead2;
+        font-family: Arial, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        padding: 6px 10px;
+        border-radius: 999px;
+      }
+
+      .step h3 {
+        margin: 0 0 10px;
+        font-size: 1.25rem;
+      }
+
+      .step p {
+        margin: 0;
+        color: #584934;
+        font-size: 0.96rem;
+      }
+
+      .benefits {
+        margin-top: 32px;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .benefit {
+        background: linear-gradient(180deg, #fffdf9, #f6f0e6);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 22px 20px;
+        box-shadow: 0 10px 20px rgba(72, 54, 40, 0.05);
+      }
+
+      .benefit-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        margin-bottom: 14px;
+        background: white;
+        font-size: 1.4rem;
+        box-shadow: inset 0 0 0 1px var(--line);
+      }
+
+      .benefit h3 {
+        margin: 0 0 8px;
+        font-size: 1.08rem;
+      }
+
+      .benefit p {
+        margin: 0 0 10px;
+        color: #574b42;
+        font-size: 0.95rem;
+      }
+
+      .benefit a {
+        display: inline-block;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        color: var(--brown-soft);
+      }
+
+      .cta-block {
+        margin-top: 52px;
+        background: linear-gradient(135deg, #32251b 0%, #4f3628 100%);
+        border-radius: 28px;
+        padding: 38px 28px;
+        color: white;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 26px;
+        align-items: center;
+        box-shadow: var(--shadow);
+      }
+
+      .cta-block h2 {
+        color: white;
+      }
+
+      .cta-copy {
+        display: grid;
+        gap: 12px;
+      }
+
+      .cta-copy p {
+        margin: 0;
+        color: #ecd7b6;
+        font-size: 1.03rem;
+      }
+
+      .cta-meta {
+        display: grid;
+        gap: 12px;
+        justify-items: center;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+
+      .contact-pill {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--gold), #eccf8d);
+        color: var(--dark);
+        padding: 12px 20px;
+        border-radius: 999px;
+        font-weight: 700;
+        box-shadow: 0 14px 24px rgba(212, 176, 109, 0.2);
+      }
+
+      .footer {
+        padding: 28px 0 56px;
+        font-family: Arial, sans-serif;
+        font-size: 0.8rem;
+        color: #65574d;
+        text-align: center;
+      }
+
+      @media (max-width: 980px) {
+        .hero-inner,
+        .intro-grid,
+        .cta-block {
+          grid-template-columns: 1fr;
+        }
+
+        .process,
+        .benefits-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .nav-links {
+          display: none;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          min-height: 540px;
+        }
+
+        .hero-inner {
+          padding: 44px 0;
+        }
+
+        .process,
+        .benefits-grid,
+        .image-stack {
+          grid-template-columns: 1fr;
+        }
+
+        .section-header {
+          display: block;
+        }
+
+        .section-header .btn {
+          margin-top: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">
+          <div class="brand-mark">🍞</div>
+          <div class="brand-name">Ancestrala</div>
+        </div>
+
+        <nav class="nav-links" aria-label="Navigare principală">
+          <a href="#despre">Despre</a>
+          <a href="#proces">Proces</a>
+          <a href="#beneficii">Beneficii</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="btn btn-primary" href="#contact">Comandă acum</a>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="Hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">Rădăuți · Suceava</div>
+          <h1>Ancestrala</h1>
+          <p class="hero-tag">Pâinea autentică cu maia, din făină integrală de secară și spelta</p>
+        </div>
+
+        <aside class="hero-card" aria-label="Detalii principale">
+          <h3>Traditie vie</h3>
+          <ul class="stat-list">
+            <li><span>Făină</span><strong>Secară + spelta</strong></li>
+            <li><span>Fermentare</span><strong>Maia naturală</strong></li>
+            <li><span>Proces</span><strong>Lent, manual</strong></li>
+            <li><span>Loturi</span><strong>Limitate</strong></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <main>
+      <div class="container">
+        <section id="despre">
+          <div class="section-header">
+            <div>
+              <div class="kicker">Primii în comunitate</div>
+              <h2>Pâine pentru oameni care se întorc la gustul adevărat</h2>
+            </div>
+            <a class="btn btn-primary" href="#contact">Vezi detaliile</a>
+          </div>
+
+          <div class="intro-grid">
+            <div class="intro-text">
+              <p class="lead">Ne dorim să aducem comunității cea mai bună pâine — Ancestrala, pâinea autentică cu maia naturală, din făină integrală de secară și spelta, coaptă după o rețetă străveche, cu respect pentru proces.</p>
+              <p>Nu suntem o brutărie industrială. Facem pâine cu răbdare, în loturi mici, folosind ingredientele potrivite și maia vie, pentru un rezultat dens, aromat și autentic. Așa cum se făcea înainte: cu puține materiale, dar cu multă atenție și tradiție.</p>
+            </div>
+
+            <div class="intro-box">
+              <p class="quote"><strong>„O pâine adevărată nu se grăbește.</strong> Se respectă procesul, se hrănește maiaua și se lasă timpul să facă treaba lui.”</p>
+            </div>
+          </div>
+
+          <div class="image-stack" style="margin-top: 28px;">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80" alt="Pâine coaptă tradițional" />
+            <img src="https://images.unsplash.com/photo-1549931314-a545dcf3bc73?auto=format&fit=crop&w=900&q=80" alt="Făină și aluat de pâine" />
+          </div>
+        </section>
+
+        <section id="proces">
+          <div class="section-header">
+            <div>
+              <div class="kicker">Cum se face</div>
+              <h2>Un proces lent, bine făcut</h2>
+            </div>
+          </div>
+
+          <div class="process">
+            <article class="step">
+              <img src="https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=900&q=80" alt="Maia vie" />
+              <div class="step-body">
+                <span class="step-no">01</span>
+                <h3>Maia vie</h3>
+                <p>Totul pornește de la maiaua noastră, hrănită zilnic, activă și gata să dea aluatului gustul și structura potrivite.</p>
+              </div>
+            </article>
+
+            <article class="step">
+              <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=900&q=80" alt="Făină de secară și spelta" />
+              <div class="step-body">
+                <span class="step-no">02</span>
+                <h3>Făinuri de bază</h3>
+                <p>Secară și spelta integrală, măcinate la piatră, cântărite atent pentru balansul ideal al fiecărui lot.</p>
+              </div>
+            </article>
+
+            <article class="step">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80" alt="Frământare și fermentare" />
+              <div class="step-body">
+                <span class="step-no">03</span>
+                <h3>Frământare manuală</h3>
+                <p>Aluatul este amestecat și frământat cu grijă, apoi lăsat să se maturizeze în ritm natural, fără presări industriale.</p>
+              </div>
+            </article>
+
+            <article class="step">
+              <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484b5?auto=format&fit=crop&w=900&q=80" alt="Coacere lentă" />
+              <div class="step-body">
+                <span class="step-no">04</span>
+                <h3>Coacere lentă</h3>
+                <p>Se coace încet, pentru crustă crocantă, miez umed, alveolat și gust cu adevărat de altădată.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-header">
+            <div>
+              <div class="kicker">Tradiție</div>
+              <h2>O tradiție de sute de ani</h2>
+            </div>
+          </div>
+
+          <p class="lead">Pâinea de secară cu maia și pâinea țărănească fac parte din inima culturii culinare germane de secole. Același spirit se regăsește și în tradiția românească a pâinii făcute la cuptor, cu maia, din faină integrala.</p>
+          <p style="margin-top: 14px; color: #584934; font-size: 1.04rem;">Ne-am inspirat din această tradiție: fermentare lentă, ingrediente puține și corecte, respect pentru proces și pentru bobul integral. Rezultatul este o pâine savuroasă, echilibrată și cu profunzime de gust.</p>
+        </section>
+
+        <section id="beneficii" class="benefits">
+          <div class="section-header">
+            <div>
+              <div class="kicker">Beneficii</div>
+              <h2>Beneficii pentru sănătate</h2>
+            </div>
+          </div>
+
+          <div class="benefits-grid">
+            <article class="benefit">
+              <div class="benefit-icon">🌍</div>
+              <h3>Dietă echilibrată</h3>
+              <p>Cerealele integrale fac parte din alimentația sănătoasă și ajută la menținerea unei diete mai echilibrate.</p>
+              <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noreferrer">OMS →</a>
+            </article>
+
+            <article class="benefit">
+              <div class="benefit-icon">❤️</div>
+              <h3>Glicemie mai stabilă</h3>
+              <p>Pâinea cu maia are un impact mai blând asupra glicemiei comparativ cu pâinea albă industrială.</p>
+              <a href="https://www.wholegraininitiative.org/" target="_blank" rel="noreferrer">Whole Grain →</a>
+            </article>
+
+            <article class="benefit">
+              <div class="benefit-icon">🌱</div>
+              <h3>Digestie mai bună</h3>
+              <p>Fermentarea naturală și fibrele din cereale integrale susțin un tranzit mai ușor și o senzație de sațietate.</p>
+              <a href="https://www.capital.ro/painea-cu-maia-de-ce-este-considerata-cea-mai-buna-paine.html" target="_blank" rel="noreferrer">Capital.ro →</a>
+            </article>
+
+            <article class="benefit">
+              <div class="benefit-icon">💪</div>
+              <h3>Spelta, bogată în nutrienți</h3>
+              <p>Spelta conține proteine și minerale importante, iar secara integrală aduce fibre și sustenabilitate energetică.</p>
+              <a href="https://www.repository.utm.md/handle/5014/21561" target="_blank" rel="noreferrer">Studii →</a>
+            </article>
+          </div>
+        </section>
+
+        <section id="contact" class="cta-block" aria-label="Contact">
+          <div class="cta-copy">
+            <div class="kicker" style="color: #f0d9a8; margin-bottom: 0;">Comenzi și detalii</div>
+            <h2>Ancestrala</h2>
+            <p>Pâinea autentică cu maia, din făină integrală de secară și spelta.</p>
+            <p>📍 Rădăuți, județul Suceava</p>
+            <p>Loturi limitate, coapte manual cu respect pentru tradiție.</p>
+          </div>
+
+          <div class="cta-meta">
+            <div class="contact-pill">📞 0736 234 679</div>
+            <div style="font-size: 0.9rem; color: #ebd9b4;">Comenzi cu minimum 2 zile înainte</div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      Ancestrala — Rădăuți, județul Suceava · Pâine făcută cu maia, răbdare și tradiție.
+    </footer>
+  </body>
+</html>
